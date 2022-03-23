@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { Component } from "react";
+import LineChart from "./Charts/LineChart";
+import BarChart from "./Charts/BarChart";
+import DoughnutChart from "./Charts/DoughnutChart";
+import AllList from "./Charts/AllList";
+import { render } from "@testing-library/react";
+import BootStrapData from "./Charts/BootstrapData";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <AllList />
+        <DoughnutChart />
+        <LineChart />
+        <BarChart />
+      </div>
+    );
+  }
 }
 
 export default App;
